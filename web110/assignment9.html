@@ -1,64 +1,210 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 9</title>
+    <title>Assignment 9 | Web Development</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f8f7f4;
+            color: #27272d;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 35px 100px;
+        }
+
+        header {
+            padding-bottom: 45px;
+            border-bottom: 1px solid #dcd9d5;
+        }
+
+        .eyebrow {
+            color: #806f99;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 15px 0;
+            font-size: clamp(42px, 7vw, 68px);
+            font-weight: 700;
+            letter-spacing: -3px;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            color: #77757b;
+            font-size: 17px;
+            margin-top: 18px;
+        }
+
+        section {
+            padding: 45px 0;
+            border-bottom: 1px solid #dcd9d5;
+        }
+
+        .section-label {
+            display: block;
+            color: #907aa8;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            margin: 0 0 22px;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -0.7px;
+            line-height: 1.3;
+        }
+
+        p {
+            margin: 0;
+            color: #55545b;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        code {
+            background: #eae6ed;
+            color: #715d88;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-size: 14px;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            margin-top: 35px;
+            color: #99959d;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 45px 22px 65px;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <main class="container">
 
-    <h1>Assignment 9</h1>
+        <header>
+            <span class="eyebrow">WEB DEVELOPMENT / WEEK 09</span>
 
-    <h2>Introduction to HTML</h2>
+            <h1>Assignment 09<span style="color:#907aa8;">.</span></h1>
 
-    <p>
-        In this activity, I learned that HTML is a markup language used
-        to create and structure web pages. I learned that even a simple
-        web page is made up of different elements, such as
-        &lt;!DOCTYPE html&gt;, &lt;html&gt;, &lt;head&gt;,
-        &lt;title&gt;, and &lt;body&gt;. These elements help organize
-        the page and allow us to add text, images, videos, links,
-        tables, and other content. Basically, HTML helps us structure
-        everything properly so that the page looks organized and easy
-        to navigate. Personally, I think learning how to build a web
-        page from scratch is very useful because these skills could
-        help me create my own website and promote my projects in
-        the future.
-    </p>
+            <p class="subtitle">
+                Exploring HTML, web hosting, and development tools.
+            </p>
+        </header>
 
-    <h2>Research Free Web Hosting Services</h2>
+        <section>
+            <span class="section-label">01 / HTML BASICS</span>
 
-    <p>
-        In this activity, I learned about free web hosting services
-        and how they allow us to publish our websites online. I looked
-        at three different services: GitHub Pages, Netlify, and
-        Cloudflare Pages. They all offer free options for hosting
-        websites, but I decided to try Netlify. Since I already had
-        my previous assignments saved on GitHub, I connected my GitHub
-        account to Netlify and selected the repository where I keep
-        my HTML pages. After a few steps, my website was published,
-        and I was able to open my Assignment 7 directly in the browser.
-        I found this activity interesting because I discovered free
-        websites that allow me to publish my work online.
-    </p>
+            <h2>Introduction to HTML</h2>
 
-    <h2>Research Free HTML Editors</h2>
+            <p>
+                In this activity, I learned that HTML is a markup
+                language used to create and structure web pages.
+                I learned that even a simple web page is made up
+                of different elements, such as
+                <code>&lt;!DOCTYPE html&gt;</code>,
+                <code>&lt;html&gt;</code>,
+                <code>&lt;head&gt;</code>,
+                <code>&lt;title&gt;</code>, and
+                <code>&lt;body&gt;</code>.
+                These elements help organize the page and allow
+                us to add text, images, videos, links, tables,
+                and other content. Basically, HTML helps us
+                structure everything properly so that the page
+                looks organized and easy to navigate. Personally,
+                I think learning how to build a web page from
+                scratch is very useful because these skills
+                could help me create my own website and promote
+                my projects in the future.
+            </p>
+        </section>
 
-    <p>
-        In this activity, I researched three free HTML editors:
-        Visual Studio Code, Notepad++, and Bluefish. All three allow
-        users to write and edit HTML code for creating web pages.
-        Personally, I have already used Visual Studio Code during
-        my previous semester to create a website for one of my
-        projects. My experience with this tool was very positive.
-        It is available in many different languages, allows users
-        to automatically insert certain elements, and has a simple
-        interface that is easy to understand. At first, it might
-        seem a little confusing because there are so many options,
-        but after using it for a while, you get used to it.
-        I enjoyed working with Visual Studio Code so much that
-        I decided to keep it installed on my computer for future use.
-    </p>
+        <section>
+            <span class="section-label">02 / WEB HOSTING</span>
 
+            <h2>Research Free Web Hosting Services</h2>
+
+            <p>
+                In this activity, I learned about free web hosting
+                services and how they allow us to publish our websites
+                online. I looked at three different services:
+                GitHub Pages, Netlify, and Cloudflare Pages.
+                They all offer free options for hosting websites,
+                but I decided to try Netlify. Since I already had
+                my previous assignments saved on GitHub, I connected
+                my GitHub account to Netlify and selected the
+                repository where I keep my HTML pages.
+                After a few steps, my website was published,
+                and I was able to open my Assignment 7 directly
+                in the browser. I found this activity interesting
+                because I discovered free websites that allow
+                me to publish my work online.
+            </p>
+        </section>
+
+        <section>
+            <span class="section-label">03 / DEVELOPMENT TOOLS</span>
+
+            <h2>Research Free HTML Editors</h2>
+
+            <p>
+                In this activity, I researched three free HTML
+                editors: Visual Studio Code, Notepad++, and Bluefish.
+                All three allow users to write and edit HTML code
+                for creating web pages. Personally, I have already
+                used Visual Studio Code during my previous semester
+                to create a website for one of my projects.
+                My experience with this tool was very positive.
+                It is available in many different languages,
+                allows users to automatically insert certain
+                elements, and has a simple interface that is
+                easy to understand. At first, it might seem
+                a little confusing because there are so many
+                options, but after using it for a while,
+                you get used to it. I enjoyed working with
+                Visual Studio Code so much that I decided
+                to keep it installed on my computer for future use.
+            </p>
+        </section>
+
+        <footer>
+            WEB110 &nbsp; / &nbsp; ASSIGNMENT 09
+        </footer>
+
+    </main>
 </body>
 </html>
