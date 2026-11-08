@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 11 | Graphics and Multimedia</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f8f7f4;
+            color: #27272d;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 35px 100px;
+        }
+
+        header {
+            padding-bottom: 45px;
+            border-bottom: 1px solid #dcd9d5;
+        }
+
+        .eyebrow {
+            color: #806f99;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 15px 0;
+            font-size: clamp(42px, 7vw, 68px);
+            font-weight: 700;
+            letter-spacing: -3px;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            color: #77757b;
+            font-size: 17px;
+            margin-top: 18px;
+        }
+
+        section {
+            padding: 45px 0;
+            border-bottom: 1px solid #dcd9d5;
+        }
+
+        .section-label {
+            display: block;
+            color: #907aa8;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            margin: 0 0 22px;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -0.7px;
+            line-height: 1.3;
+        }
+
+        h3 {
+            color: #55545b;
+            font-size: 19px;
+            margin: 30px 0 15px;
+        }
+
+        p {
+            margin: 0 0 20px;
+            color: #55545b;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 25px auto;
+            border-radius: 8px;
+        }
+
+        audio {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            margin: 25px 0;
+        }
+
+        video {
+            display: block;
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        iframe {
+            display: block;
+            width: 100%;
+            max-width: 700px;
+            aspect-ratio: 16 / 9;
+            margin: 25px 0;
+            border: 0;
+            border-radius: 8px;
+        }
+
+        footer {
+            margin-top: 35px;
+            color: #99959d;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 45px 22px 65px;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+
+        <header>
+            <span class="eyebrow">WEB DEVELOPMENT /</span>
+
+            <h1>
+                Assignment 11<span style="color:#907aa8;">.</span>
+            </h1>
+
+            <p class="subtitle">
+                Exploring Graphics and Multimedia in Web Development.
+            </p>
+        </header>
+
+        <!-- Raster and Vector Graphics -->
+        <section>
+            <span class="section-label">GRAPHICS</span>
+            <h2>Raster and Vector Images</h2>
+
+            <h3>Raster Image – Canva</h3>
+
+            <img
+                src="Creative Web Design.png"
+                alt="Creative Web Design raster graphic created in Canva"
+                width="400">
+
+            <h3>Vector Image – Adobe Illustrator</h3>
+
+            <img
+                src="vector_image.svg"
+                alt="Vector illustration of a browser window created in Illustrator"
+                width="500">
+        </section>
+
+        <section>
+    <span class="section-label">MULTIMEDIA 01</span>
+    <h2>HTML5 Audio</h2>
+
+    <audio controls>
+        <source
+            src="https://www.w3schools.com/html/horse.ogg"
+            type="audio/ogg">
+
+        <source
+            src="https://www.w3schools.com/html/horse.mp3"
+            type="audio/mpeg">
+
+        Your browser does not support the audio element.
+    </audio>
+</section>
+
+        
+<section>
+    <span class="section-label">MULTIMEDIA 02</span>
+    <h2>HTML5 Video</h2>
+
+    <video width="600" controls preload="metadata">
+        <source
+            src="https://www.w3schools.com/html/mov_bbb.webm"
+            type="video/webm">
+
+        <source
+            src="https://www.w3schools.com/html/mov_bbb.ogg"
+            type="video/ogg">
+
+        <source
+            src="https://www.w3schools.com/html/mov_bbb.mp4"
+            type="video/mp4">
+
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+
+        <!-- YouTube Video -->
+        <section>
+            <span class="section-label">MULTIMEDIA 03</span>
+            <h2>YouTube Screen Recording</h2>
+
+            <iframe
+                src="https://www.youtube.com/embed/csFtDgIfMa4"
+                title="Screen Recording Demonstration"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <!-- Learning Summary -->
+        <section>
+            <span class="section-label">LEARNING SUMMARY</span>
+            <h2>What I Learned</h2>
+
+            <p>
+                For the first activity, I created a simple raster image
+                using Canva, a website that offers many options for
+                creating different types of images. For the second
+                activity, I created a vector graphic using Adobe
+                Illustrator, a program I usually use for creating
+                different kinds of projects. In the third activity,
+                I learned what Photoshop is and what it is used for.
+                Since Photoshop is quite expensive, it is mainly
+                recommended for professional use. However, I think
+                it can also be useful for people who simply want
+                to edit their photos in everyday life. It allows
+                users to correct imperfections, adjust lighting
+                and colors, and make images more visually attractive.
+                It can also be used to make changes that look as
+                realistic and natural as possible. For the fourth
+                activity, I used the screen recording feature on
+                my computer by pressing Windows + G to create a short
+                video of about one minute to include on my web page.
+                Finally, I uploaded the video to YouTube to get a
+                direct link that I could use to embed it on my web
+                page. I also added the image files I created to
+                my web110 folder so they could be displayed
+                correctly on the page. These activities helped
+                me understand how different types of graphics
+                and multimedia can be used to make a web page more
+                interesting and visually appealing. I think this
+                knowledge will be useful for creating and
+                personalizing my own websites in the future.
+            </p>
+        </section>
+
+        <footer>
+            WEB110 / ASSIGNMENT 11
+        </footer>
+
+    </main>
+</body>
+</html>
