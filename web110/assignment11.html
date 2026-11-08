@@ -145,6 +145,37 @@
                 font-size: 24px;
             }
         }
+        
+.graphics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+    align-items: start;
+    margin-top: 30px;
+}
+
+.graphics-item {
+    text-align: center;
+}
+
+.graphics-item h3 {
+    margin: 0 0 20px;
+}
+
+.graphics-item img {
+    width: 100%;
+    max-width: 260px;
+    height: 240px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .graphics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
     </style>
 </head>
 
@@ -163,24 +194,31 @@
             </p>
         </header>
 
-        <!-- Raster and Vector Graphics -->
-        <section>
-            <span class="section-label">GRAPHICS</span>
-            <h2>Raster and Vector Images</h2>
+        
+<!-- Raster and Vector Graphics -->
+<section>
+    <span class="section-label">GRAPHICS</span>
+    <h2>Raster and Vector Images</h2>
 
+    <div class="graphics-grid">
+
+        <div class="graphics-item">
             <h3>Raster Image – Canva</h3>
-
             <img
                 src="Creative Web Design.png"
-                alt="Creative Web Design raster graphic created in Canva"
-                width="400">
+                alt="Creative Web Design raster graphic created in Canva">
+        </div>
 
+        <div class="graphics-item">
             <h3>Vector Image – Adobe Illustrator</h3>
-
             <img
                 src="vector_image.svg"
-                alt="Vector illustration of a browser window created in Illustrator"
-                width="500">
+                alt="Vector illustration of a browser window created in Illustrator">
+        </div>
+
+    </div>
+</section>
+
         </section>
 
         <section>
