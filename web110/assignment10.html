@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 10 | Introduction to CSS</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS - Same design as Assignment 9 -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f8f7f4;
+            color: #27272d;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 35px 100px;
+        }
+
+        header {
+            padding-bottom: 45px;
+            border-bottom: 1px solid #dcd9d5;
+        }
+
+        .eyebrow {
+            color: #806f99;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 15px 0;
+            font-size: clamp(42px, 7vw, 68px);
+            font-weight: 700;
+            letter-spacing: -3px;
+            line-height: 1.1;
+            color: #27272d;
+            text-align: left;
+        }
+
+        .subtitle {
+            color: #77757b;
+            font-size: 17px;
+            margin-top: 18px;
+        }
+
+        section {
+            padding: 45px 0;
+            border-bottom: 1px solid #dcd9d5;
+        }
+
+        .section-label {
+            display: block;
+            color: #907aa8;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            margin: 0 0 22px;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -0.7px;
+            line-height: 1.3;
+        }
+
+        p {
+            margin: 0;
+            color: #55545b;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        code {
+            background: #eae6ed;
+            color: #715d88;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-size: 14px;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            margin-top: 35px;
+            color: #99959d;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 45px 22px 65px;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+
+        <header>
+            <span class="eyebrow">WEB DEVELOPMENT /</span>
+
+            <h1>Assignment 10<span style="color:#907aa8;">.</span></h1>
+
+            <p class="subtitle">
+                Introduction to CSS and web page styling.
+            </p>
+        </header>
+
+        <section>
+            <span class="section-label">ACTIVITY 01</span>
+            <h2>Exploring CSS Tutorials</h2>
+
+            <p style="color: #62546f; font-size: 17px; line-height: 1.9; text-align: left;">
+                For the first activity, I chose W3Schools because I was already
+                familiar with this website. First of all, it offers a simple
+                tutorial with a screen divided into two sections: on the left,
+                there is the code, and on the right, there is the web page as
+                we see it. This allows us to see the changes we make to the
+                website by clicking the Run button. I played around with the
+                background color, text size, and fonts. I found it very useful
+                because it also offers free examples, exercises, and CSS quizzes.
+            </p>
+        </section>
+
+        <section>
+            <span class="section-label">ACTIVITY 02</span>
+            <h2>Using Inline CSS</h2>
+
+            <p>
+                In the second activity, I learned that CSS basically allows us
+                to change the layout of a web page, which can save a lot of work.
+                There are three ways to use CSS: inline, internal, and external.
+                Inline CSS uses the style attribute directly inside HTML elements,
+                internal CSS uses a style element in the head section, and external
+                CSS uses a link to connect an HTML page to a separate CSS file.
+                The most common method is external CSS. In this activity, I
+                practiced using inline CSS on one of my existing HTML pages,
+                following a similar process to the first activity. I experimented
+                with colors, font sizes, and text alignment. I noticed that inline
+                and internal CSS can produce the same visual appearance, and the
+                main difference is where the CSS code is written. The tutorial
+                also explains colors, fonts, sizes, borders, padding, margins,
+                and links, which are all useful things to know when creating web
+                pages the way we like them. Each topic offers an exercise where
+                we can test and learn. Finally, I used the W3C Validator to
+                check for errors in my HTML code.
+            </p>
+        </section>
+
+        <section>
+            <span class="section-label">ACTIVITY 03</span>
+            <h2>Practicing Internal CSS</h2>
+
+            <p>
+                For the third activity, I practiced using internal CSS, which
+                was easier for me because I had already used it in my previous
+                assignments. I usually write my CSS at the beginning of the
+                HTML document and then continue with the content of the page.
+                Finally, I used the W3C Validator for this activity as well
+                to check for errors and correct them.
+            </p>
+        </section>
+
+        <section>
+            <span class="section-label">ACTIVITY 04</span>
+            <h2>Creating External CSS</h2>
+
+            <p>
+                For the last activity, I practiced using external CSS by creating
+                a separate file called assignment5.css for one of my previous
+                HTML pages. In my opinion, this is a more organized way to work
+                because it keeps things separate from each other. In this exercise,
+                I also played around with margins, fonts, and colors, and
+                validated the CSS using the W3C CSS Validator.
+            </p>
+        </section>
+
+        <section>
+            <span class="section-label">FINAL REFLECTION</span>
+            <h2>What I Learned</h2>
+
+            <p>
+                I think what I learned from these activities will be useful
+                for creating and customizing my own web pages in the future.
+            </p>
+        </section>
+
+        <footer>
+            WEB110 / ASSIGNMENT 10
+        </footer>
+
+    </main>
+</body>
+</html>
