@@ -240,3 +240,273 @@ p {
         gap: 5px;
     }
 }
+
+/* ASSIGNMENT 13 */
+
+.assignment13 .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 35px 100px;
+}
+
+.assignment13 header {
+    padding-bottom: 45px;
+    border-bottom: 1px solid #dcd9d5;
+}
+
+.assignment13 .eyebrow {
+    color: #806f99;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.assignment13 h1 {
+    font-size: clamp(42px, 7vw, 68px);
+    letter-spacing: -3px;
+}
+
+.assignment13 .accent {
+    color: #907aa8;
+}
+
+.assignment13 .subtitle {
+    color: #77757b;
+    font-size: 17px;
+}
+
+.assignment13 section {
+    padding: 45px 0;
+    border-bottom: 1px solid #dcd9d5;
+}
+
+.assignment13 .section-label {
+    display: block;
+    color: #907aa8;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.assignment13 h2 {
+    font-size: 28px;
+    margin: 0 0 22px;
+    letter-spacing: -0.7px;
+}
+
+.assignment13 h3 {
+    font-size: 19px;
+    color: #55545b;
+    margin: 30px 0 15px;
+}
+
+.assignment13 p {
+    color: #55545b;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* SQL STATEMENTS */
+
+.assignment13 .sql-heading {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    padding: 15px;
+    background: #806f99;
+    color: white;
+    border-radius: 7px 7px 0 0;
+    font-size: 14px;
+}
+
+.assignment13 .sql-grid {
+    list-style: none;
+    margin: 0 0 35px;
+    padding: 0;
+    border: 1px solid #e6e0e8;
+    border-top: none;
+    border-radius: 0 0 7px 7px;
+    overflow: hidden;
+}
+
+.assignment13 .sql-grid li {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    border-bottom: 1px solid #e6e0e8;
+}
+
+.assignment13 .sql-grid li:last-child {
+    border-bottom: none;
+}
+
+.assignment13 .sql-grid li:nth-child(even) {
+    background: #f2edf5;
+}
+
+.assignment13 .sql-grid code,
+.assignment13 .sql-grid span {
+    padding: 16px;
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.assignment13 .sql-grid code {
+    white-space: pre-line;
+    font-family: Consolas, Monaco, monospace;
+    color: #685477;
+    border-right: 1px solid #e6e0e8;
+}
+
+/* DATABASE EDITOR */
+
+.assignment13 .db-panel {
+    background: white;
+    border: 1px solid #e6e0e8;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 25px 0;
+}
+
+.assignment13 label {
+    display: block;
+    margin: 15px 0 8px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #55545b;
+}
+
+.assignment13 textarea,
+.assignment13 select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d5cedb;
+    border-radius: 7px;
+    background: #fcfbfd;
+    color: #27272d;
+    font: 14px/1.7 Consolas, monospace;
+}
+
+.assignment13 .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 18px 0;
+}
+
+.assignment13 button {
+    background: #806f99;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font: 600 14px Arial, sans-serif;
+    cursor: pointer;
+}
+
+.assignment13 button:hover {
+    background: #665579;
+}
+
+.assignment13 button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.assignment13 .secondary-button {
+    background: #eeeaf1;
+    color: #61516f;
+}
+
+.assignment13 .secondary-button:hover {
+    background: #ded6e5;
+}
+
+.assignment13 button:focus-visible,
+.assignment13 textarea:focus-visible,
+.assignment13 select:focus-visible {
+    outline: 3px solid #c2afd5;
+    outline-offset: 2px;
+}
+
+.assignment13 #sqlStatus {
+    margin-top: 20px;
+    padding: 12px;
+    background: #f7f4f9;
+    border-left: 3px solid #907aa8;
+    font-size: 14px;
+}
+
+.assignment13 .small-note {
+    font-size: 13px;
+    color: #77757b;
+}
+
+/* RESULT TABLE */
+
+.assignment13 .table-scroll {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.assignment13 table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 14px;
+}
+
+.assignment13 th {
+    background: #806f99;
+    color: white;
+    text-align: left;
+    padding: 13px;
+}
+
+.assignment13 td {
+    padding: 12px;
+    border-bottom: 1px solid #e6e0e8;
+}
+
+.assignment13 tbody tr:nth-child(even) {
+    background: #faf8fb;
+}
+
+.assignment13 footer {
+    margin-top: 35px;
+    color: #99959d;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .assignment13 .container {
+        padding: 45px 22px 65px;
+    }
+
+    .assignment13 h2 {
+        font-size: 24px;
+    }
+
+    .assignment13 .db-panel {
+        padding: 20px;
+    }
+
+    .assignment13 .sql-grid li,
+    .assignment13 .sql-heading {
+        grid-template-columns: 1fr;
+    }
+
+    .assignment13 .sql-heading strong:last-child {
+        display: none;
+    }
+
+    .assignment13 .sql-grid code {
+        border-right: none;
+        border-bottom: 1px solid #e6e0e8;
+    }
+}
+
+

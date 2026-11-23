@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 13 | Databases and SQL</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.js"></script>
+</head>
+
+<body class="assignment13">
+
+<main class="container">
+
+    <header>
+        <span class="eyebrow">WEB110/ </span>
+
+        <h1>Assignment 13<span class="accent">.</span></h1>
+
+        <p class="subtitle">
+            Understanding SQL and practicing with a small database.
+        </p>
+    </header>
+
+    <!-- SECTION 1: MY SUMMARY -->
+
+    <section>
+        <span class="section-label">01 / WHAT I LEARNED</span>
+        <h2>Introduction to SQL</h2>
+
+        <p>
+            In this activity, I learned that SQL is a language
+            used to work with databases. It allows us to search
+            for information, add new data, change existing
+            information, or delete it. SQL can also be used to
+            create databases and tables and control who can
+            access certain information. Most of these actions
+            are done using SQL statements with specific keywords.
+            For example, <code>SELECT * FROM Customers;</code>
+            shows all the customers in a table, along with
+            information such as their names, addresses, and
+            countries. I also learned that in many databases,
+            a semicolon is used to separate SQL statements,
+            allowing us to write more than one statement.
+            I practiced using the SQL Tryit Editor on W3Schools,
+            and I found it very useful because the tables
+            already contain sample data. This makes it easier
+            to try different commands and immediately see what
+            happens without having to create a database from
+            scratch. I think SQL is very useful for organizing
+            and working with large amounts of information,
+            especially when you need to find or update
+            specific data.
+        </p>
+    </section>
+
+    <!-- SECTION 2: SQL COMMANDS -->
+
+    <section>
+        <span class="section-label">02 / SQL COMMANDS</span>
+        <h2>SQL Statements and Their Functions</h2>
+
+        <p>
+            The following statements demonstrate different SQL
+            commands and explain what they can be used for.
+        </p>
+
+        <h3>Single-Table SELECT Statements</h3>
+
+        <div class="sql-heading">
+            <strong>SQL Statement</strong>
+            <strong>What It Does</strong>
+        </div>
+
+        <ul class="sql-grid">
+
+            <li>
+                <code>SELECT * FROM Customers;</code>
+                <span>
+                    SELECT * retrieves all columns and
+                    records from a table.
+                </span>
+            </li>
+
+            <li>
+                <code>SELECT CustomerID, CustomerName
+FROM Customers;</code>
+                <span>
+                    SELECT can retrieve specific columns
+                    instead of all the information.
+                </span>
+            </li>
+
+            <li>
+                <code>SELECT CustomerName, Address, City, PostalCode
+FROM Customers
+WHERE Country = 'UK';</code>
+                <span>
+                    WHERE filters records using a
+                    specific condition.
+                </span>
+            </li>
+
+            <li>
+                <code>SELECT ContactName, CustomerName
+FROM Customers
+ORDER BY ContactName ASC;</code>
+                <span>
+                    ORDER BY sorts results.
+                    ASC means ascending order, such as A to Z.
+                </span>
+            </li>
+
+            <li>
+                <code>SELECT COUNT(*) AS TotalCustomers
+FROM Customers;</code>
+                <span>
+                    COUNT(*) counts the number of records.
+                    AS gives the result column a temporary name.
+                </span>
+            </li>
+
+            <li>
+                <code>SELECT Country, COUNT(*) AS Total
+FROM Customers
+GROUP BY Country;</code>
+                <span>
+                    GROUP BY organizes records that share
+                    the same value and allows counting
+                    each group.
+                </span>
+            </li>
+
+            <li>
+                <code>SELECT Country, COUNT(*) AS Total
+FROM Customers
+GROUP BY Country
+ORDER BY Total DESC, Country ASC;</code>
+                <span>
+                    ORDER BY can sort numerical results
+                    from highest to lowest using DESC,
+                    or alphabetically using ASC.
+                </span>
+            </li>
+
+            <li>
+                <code>SELECT Country, COUNT(*) AS Total
+FROM Customers
+GROUP BY Country
+HAVING COUNT(*) &gt; 10
+ORDER BY Total DESC, Country ASC;</code>
+                <span>
+                    HAVING filters grouped results
+                    based on a condition.
+                </span>
+            </li>
+
+        </ul>
+
+        <h3>INSERT, UPDATE, and DELETE Statements</h3>
+
+        <div class="sql-heading">
+            <strong>SQL Statement</strong>
+            <strong>What It Does</strong>
+        </div>
+
+        <ul class="sql-grid">
+
+            <li>
+                <code>INSERT INTO Shippers
+(ShipperID, ShipperName, Phone)
+VALUES (4, 'On Time Delivery', '(503) 555 0123');</code>
+                <span>
+                    INSERT INTO adds a new record to a table.
+                    VALUES specifies the information to add.
+                </span>
+            </li>
+
+            <li>
+                <code>UPDATE Products
+SET Price = Price + 1;</code>
+                <span>
+                    UPDATE modifies existing records.
+                    SET specifies the new value.
+                </span>
+            </li>
+
+            <li>
+                <code>UPDATE Products
+SET Price = Price - 1;</code>
+                <span>
+                    UPDATE can also decrease numerical
+                    values in existing records.
+                </span>
+            </li>
+
+            <li>
+                <code>UPDATE Shippers
+SET ShipperName = 'On-Time Delivery'
+WHERE ShipperID = 4;</code>
+                <span>
+                    UPDATE with WHERE changes only the
+                    records that meet a specific condition.
+                </span>
+            </li>
+
+            <li>
+                <code>DELETE FROM Shippers
+WHERE ShipperID = 4;</code>
+                <span>
+                    DELETE FROM removes records from a table.
+                    WHERE identifies which records to delete.
+                </span>
+            </li>
+
+        </ul>
+    </section>
+
+    <!-- SECTION 3: MY PRACTICE DATABASE -->
+
+    <section>
+        <span class="section-label">03 / HANDS-ON PRACTICE</span>
+        <h2>World Countries Database</h2>
+
+        <p>
+            I created this small practice database to experiment
+            with SQL commands. It contains information about
+            countries, including their capitals, languages,
+            currencies, religions, and continents.
+            I can use different commands to search, organize,
+            add, update, or delete information.
+        </p>
+
+        <div class="db-panel">
+
+            <h3>SQL Practice Editor</h3>
+
+            <label for="sqlQuery">
+                Write an SQL statement:
+            </label>
+
+            <textarea id="sqlQuery" rows="4"
+                      spellcheck="false">SELECT * FROM Countries;</textarea>
+
+            <div class="button-group">
+
+                <button id="runSQL" type="button" disabled>
+                    Run SQL
+                </button>
+
+                <button id="resetSQL" type="button"
+                        class="secondary-button" disabled>
+                    Reset Data
+                </button>
+
+            </div>
+
+            <label for="exampleQuery">
+                Or choose an example:
+            </label>
+
+            <select id="exampleQuery">
+
+                <option value="">
+                    Select a command...
+                </option>
+
+                <option value="SELECT * FROM Countries;">
+                    SELECT - All Countries
+                </option>
+
+                <option value="SELECT CountryName, Language, Currency FROM Countries;">
+                    SELECT - Languages and Currencies
+                </option>
+
+                <option value="SELECT * FROM Countries WHERE Continent = 'Europe';">
+                    WHERE - European Countries
+                </option>
+
+                <option value="SELECT CountryName, Capital FROM Countries ORDER BY CountryName ASC;">
+                    ORDER BY - Country Names
+                </option>
+
+                <option value="SELECT COUNT(*) AS Total FROM Countries;">
+                    COUNT - Total Countries
+                </option>
+
+                <option value="SELECT Continent, COUNT(*) AS Total FROM Countries GROUP BY Continent;">
+                    GROUP BY - Continents
+                </option>
+
+                <option value="SELECT Continent, COUNT(*) AS Total FROM Countries GROUP BY Continent HAVING COUNT(*) > 1;">
+                    HAVING - More Than One Country
+                </option>
+
+                <option value="SELECT CountryName AS Country, Capital AS City FROM Countries;">
+                    ALIASES - Rename Columns
+                </option>
+
+                <option value="INSERT INTO Countries VALUES (9, 'Norway', 'Oslo', 'Norwegian', 'Norwegian krone', 'Christianity', 'Europe');">
+                    INSERT - Add Norway
+                </option>
+
+                <option value="UPDATE Countries SET Capital = 'New Rome' WHERE CountryID = 1;">
+                    UPDATE - Change a Capital
+                </option>
+
+                <option value="DELETE FROM Countries WHERE CountryID = 9;">
+                    DELETE - Remove Norway
+                </option>
+
+            </select>
+
+            <p class="small-note">
+                You can write your own SQL statement or choose
+                an example. Click Run SQL to see the results.
+                The data is temporary and can be reset at any time.
+            </p>
+
+            <p class="small-note">
+                The database uses simplified sample information.
+                Religion refers to common religious traditions,
+                not the beliefs of every person in a country.
+            </p>
+
+            <p id="sqlStatus" role="status" aria-live="polite">
+                Loading SQL database...
+            </p>
+
+            <div id="sqlResult" class="table-scroll"
+                 aria-live="polite"></div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        WEB110 / ASSIGNMENT 13 / DATABASES
+    </footer>
+
+</main>
+
+<!-- JAVASCRIPT: SQL PRACTICE DATABASE -->
+
+<script>
+(() => {
+    "use strict";
+
+    const base =
+        "https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/";
+
+    const input = document.getElementById("sqlQuery");
+    const runButton = document.getElementById("runSQL");
+    const resetButton = document.getElementById("resetSQL");
+    const select = document.getElementById("exampleQuery");
+    const status = document.getElementById("sqlStatus");
+    const result = document.getElementById("sqlResult");
+
+    let SQL;
+    let db;
+
+    // CREATE THE DATABASE
+
+    function setupDatabase() {
+
+        if (db) {
+            db.close();
+        }
+
+        db = new SQL.Database();
+
+        db.run(`
+            CREATE TABLE Countries (
+                CountryID INTEGER PRIMARY KEY,
+                CountryName TEXT,
+                Capital TEXT,
+                Language TEXT,
+                Currency TEXT,
+                Religion TEXT,
+                Continent TEXT
+            );
+
+            INSERT INTO Countries VALUES
+
+                (1, 'Italy', 'Rome', 'Italian',
+                 'Euro', 'Christianity', 'Europe'),
+
+                (2, 'Ukraine', 'Kyiv', 'Ukrainian',
+                 'Hryvnia', 'Christianity', 'Europe'),
+
+                (3, 'Japan', 'Tokyo', 'Japanese',
+                 'Yen', 'Shinto and Buddhism', 'Asia'),
+
+                (4, 'India', 'New Delhi', 'Hindi and English',
+                 'Indian rupee', 'Hinduism', 'Asia'),
+
+                (5, 'Brazil', 'Brasilia', 'Portuguese',
+                 'Brazilian real', 'Christianity',
+                 'South America'),
+
+                (6, 'Mexico', 'Mexico City', 'Spanish',
+                 'Mexican peso', 'Christianity',
+                 'North America'),
+
+                (7, 'Egypt', 'Cairo', 'Arabic',
+                 'Egyptian pound', 'Islam', 'Africa'),
+
+                (8, 'United States', 'Washington D.C.',
+                 'English', 'US dollar', 'Christianity',
+                 'North America');
+        `);
+    }
+
+    // DISPLAY QUERY RESULTS IN A TABLE
+
+    function createTable(container, columns, rows) {
+
+        container.replaceChildren();
+
+        if (!columns.length) {
+            return;
+        }
+
+        const table = document.createElement("table");
+        const thead = document.createElement("thead");
+        const headerRow = document.createElement("tr");
+
+        columns.forEach(column => {
+
+            const th = document.createElement("th");
+
+            th.scope = "col";
+            th.textContent = column;
+
+            headerRow.appendChild(th);
+        });
+
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+
+        const tbody = document.createElement("tbody");
+
+        rows.forEach(row => {
+
+            const tr = document.createElement("tr");
+
+            row.forEach(value => {
+
+                const td = document.createElement("td");
+
+                td.textContent =
+                    value === null ? "NULL" : String(value);
+
+                tr.appendChild(td);
+            });
+
+            tbody.appendChild(tr);
+        });
+
+        table.appendChild(tbody);
+        container.appendChild(table);
+    }
+
+    // RUN THE SQL COMMAND
+
+    runButton.addEventListener("click", () => {
+
+        if (!db) {
+            return;
+        }
+
+        const query = input.value.trim();
+
+        if (!query) {
+            status.textContent =
+                "Please enter an SQL statement.";
+            return;
+        }
+
+        try {
+
+            const data = db.exec(query);
+
+            if (data.length) {
+
+                const last = data[data.length - 1];
+
+                createTable(
+                    result,
+                    last.columns,
+                    last.values
+                );
+
+                status.textContent =
+                    "Query executed successfully. " +
+                    last.values.length + " result(s).";
+
+            } else {
+
+                result.replaceChildren();
+
+                status.textContent =
+                    "Statement executed successfully. " +
+                    db.getRowsModified() +
+                    " row(s) changed.";
+            }
+
+        } catch (error) {
+
+            status.textContent =
+                "SQL Error: " + error.message;
+
+            result.replaceChildren();
+        }
+    });
+
+    // RESET THE ORIGINAL DATABASE
+
+    resetButton.addEventListener("click", () => {
+
+        setupDatabase();
+
+        input.value = "SELECT * FROM Countries;";
+        select.value = "";
+
+        result.replaceChildren();
+
+        status.textContent =
+            "Database reset successfully.";
+    });
+
+    // SELECT A PRACTICE COMMAND
+
+    select.addEventListener("change", () => {
+
+        if (select.value) {
+            input.value = select.value;
+        }
+    });
+
+    // LOAD THE SQL ENGINE
+
+    window.addEventListener("load", async () => {
+
+        try {
+
+            if (typeof initSqlJs !== "function") {
+                throw new Error("SQL library unavailable.");
+            }
+
+            SQL = await initSqlJs({
+                locateFile: file => base + file
+            });
+
+            setupDatabase();
+
+            runButton.disabled = false;
+            resetButton.disabled = false;
+
+            status.textContent = "Database ready.";
+
+            runButton.click();
+
+        } catch (error) {
+
+            status.textContent =
+                "Could not load the database: " +
+                error.message;
+        }
+    });
+
+})();
+</script>
+
+</body>
+</html>
