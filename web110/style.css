@@ -26,3 +26,217 @@ p {
     font-size: 16px;
     line-height: 1.9;
 }
+
+/* ASSIGNMENT 12 - JAVASCRIPT */
+
+.assignment12 .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 35px 100px;
+}
+
+.assignment12 header {
+    padding-bottom: 45px;
+    border-bottom: 1px solid #dcd9d5;
+}
+
+.assignment12 .eyebrow {
+    color: #806f99;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.assignment12 h1 {
+    margin: 15px 0;
+    font-size: clamp(42px, 7vw, 68px);
+    font-weight: 700;
+    letter-spacing: -3px;
+    line-height: 1.1;
+}
+
+.assignment12 .accent {
+    color: #907aa8;
+}
+
+.assignment12 .subtitle {
+    color: #77757b;
+    font-size: 17px;
+    margin-top: 18px;
+}
+
+.assignment12 section {
+    padding: 45px 0;
+    border-bottom: 1px solid #dcd9d5;
+}
+
+.assignment12 .section-label {
+    display: block;
+    color: #907aa8;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.assignment12 h2 {
+    margin: 0 0 22px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.7px;
+    line-height: 1.3;
+}
+
+.assignment12 h3 {
+    color: #55545b;
+    font-size: 19px;
+    margin: 30px 0 15px;
+}
+
+.assignment12 p {
+    margin: 0 0 20px;
+    color: #55545b;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* INTERACTIVE DEMOS */
+
+.assignment12 .demo-box {
+    background: #ffffff;
+    border: 1px solid #e6e0e8;
+    border-radius: 12px;
+    padding: 32px;
+    margin: 25px 0;
+}
+
+.assignment12 .demo-box h2 {
+    color: #806f99;
+    margin-bottom: 10px;
+}
+
+.assignment12 .demo-box h3 {
+    margin-top: 0;
+}
+
+.assignment12 .demo-note {
+    color: #99959d;
+    font-size: 13px;
+    margin: 15px 0 0;
+}
+
+.assignment12 .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.assignment12 button {
+    background: #806f99;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.assignment12 button:hover {
+    background: #665579;
+}
+
+.assignment12 button:focus-visible {
+    outline: 3px solid #c0acd2;
+    outline-offset: 3px;
+}
+
+.assignment12 .secondary-button {
+    background: #eeeaf1;
+    color: #61516f;
+}
+
+.assignment12 .secondary-button:hover {
+    background: #ded6e5;
+}
+
+/* LIGHT BULB */
+
+.assignment12 .bulb-demo {
+    text-align: center;
+}
+
+.assignment12 .bulb-demo img {
+    display: block;
+    width: 100px;
+    height: 180px;
+    object-fit: contain;
+    margin: 0 auto 25px;
+}
+
+.assignment12 .bulb-demo .button-group {
+    justify-content: center;
+}
+
+/* CANVAS */
+
+.assignment12 .canvas-box {
+    text-align: center;
+}
+
+.assignment12 canvas {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto 25px;
+    background: #faf8fb;
+    border: 1px solid #eee9f1;
+    border-radius: 8px;
+}
+
+/* FOOTER */
+
+.assignment12 footer {
+    margin-top: 35px;
+    color: #99959d;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .assignment12 .container {
+        padding: 45px 22px 65px;
+    }
+
+    .assignment12 h1 {
+        letter-spacing: -2px;
+    }
+
+    .assignment12 h2 {
+        font-size: 24px;
+    }
+
+    .assignment12 .demo-box {
+        padding: 20px;
+    }
+
+    .assignment12 .button-group {
+        gap: 10px;
+    }
+
+    .assignment12 button {
+        padding: 11px 15px;
+    }
+
+    .assignment12 .date-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

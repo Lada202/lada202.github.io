@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 12 - Exploring JavaScript  </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="assignment12">
+<main class="container">
+
+    <header>
+        <span class="eyebrow">WEB110 /</span>
+        <h1>Assignment 12<span class="accent">.</span></h1>
+        <p class="subtitle">
+            Exploring JavaScript - Learning how JavaScript makes web pages
+            interactive and functional.
+        </p>
+    </header>
+
+    <!-- SECTION 1: INTRODUCTION -->
+
+    <section>
+        <span class="section-label">01 / INTRODUCTION</span>
+        <h2>JavaScript and Web Development</h2>
+
+        <p>
+            HTML defines the content of a web page,
+            CSS controls its appearance, and JavaScript
+            adds dynamic and interactive functionality.
+        </p>
+
+        <h3>Displaying My Name with JavaScript</h3>
+
+        <p>
+            This heading is initially empty in HTML.
+            JavaScript inserts my name automatically.
+        </p>
+
+        <div class="demo-box">
+            <h1 id="myName"></h1>
+        </div>
+    </section>
+
+    <!-- SECTION 2: LIGHT BULB -->
+
+    <section>
+        <span class="section-label">02 / INTERACTIVITY</span>
+        <h2>The Light Bulb Example</h2>
+
+        <p>
+            JavaScript can change HTML attributes.
+            In this example, clicking a button changes
+            the source of an image, turning the light
+            bulb on or off.
+        </p>
+
+        <div class="demo-box bulb-demo">
+            <img
+                id="lightBulb"
+                src="https://www.w3schools.com/js/pic_bulboff.gif"
+                alt="A light bulb that is turned off"
+                width="100"
+                height="180"
+            >
+
+            <div class="button-group">
+                <button type="button" onclick="turnOn()">
+                    Turn On
+                </button>
+
+                <button type="button" onclick="turnOff()"
+                        class="secondary-button">
+                    Turn Off
+                </button>
+            </div>
+
+            <p id="bulbStatus" class="demo-note">
+                The light is off.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 3: DATE AND TIME -->
+
+    <section>
+        <span class="section-label">03 / DATE OBJECTS</span>
+        <h2>Working with Dates and Time</h2>
+
+        <p>
+            JavaScript Date objects allow us to work
+            with dates and times. They can display
+            the current date and time automatically
+            and format dates in different ways.
+        </p>
+
+        <div class="demo-box">
+            <h3>Current Date and Time</h3>
+
+            <p id="currentDate" class="date-display"></p>
+
+            <button type="button" onclick="updateDate()">
+                Refresh Date and Time
+            </button>
+        </div>
+
+        <h3>Different Date Formats</h3>
+
+        <div class="demo-box">
+            <div class="date-row">
+                <span>ISO Date</span>
+                <strong id="isoDate"></strong>
+            </div>
+
+            <div class="date-row">
+                <span>Short Date</span>
+                <strong id="shortDate"></strong>
+            </div>
+
+            <div class="date-row">
+                <span>Long Date</span>
+                <strong id="longDate"></strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: CANVAS TEXT -->
+
+    <section>
+        <span class="section-label">04 / CANVAS TEXT</span>
+        <h2>Drawing Text with JavaScript</h2>
+
+        <p>
+            The HTML canvas element allows JavaScript
+            to draw graphics directly on a web page.
+            In this example, JavaScript draws my name
+            on the canvas.
+        </p>
+
+        <div class="demo-box canvas-box">
+            <canvas id="nameCanvas" width="700" height="180">
+                Your browser does not support HTML canvas.
+            </canvas>
+
+            <button type="button" onclick="drawName()">
+                Draw My Name
+            </button>
+        </div>
+    </section>
+
+    <!-- SECTION 5: CANVAS SHAPES -->
+
+    <section>
+        <span class="section-label">05 / CANVAS GRAPHICS</span>
+        <h2>Drawing Shapes with JavaScript</h2>
+
+        <p>
+            JavaScript can also draw different shapes
+            on a canvas, including lines, circles,
+            squares, and triangles.
+        </p>
+
+        <div class="demo-box canvas-box">
+            <canvas id="shapesCanvas" width="700" height="260">
+                Your browser does not support HTML canvas.
+            </canvas>
+
+            <button type="button" onclick="drawShapes()">
+                Draw Shapes
+            </button>
+        </div>
+    </section>
+
+    <!-- SECTION 6: PERSONAL SUMMARY -->
+
+    <section>
+        <span class="section-label">06 / REFLECTION</span>
+        <h2>What I Learned</h2>
+
+        <p>
+            In this activity, I learned that JavaScript
+            is one of the three main languages used to
+            create websites, along with HTML and CSS.
+            While HTML is used to organize the content
+            and CSS defines the appearance of a web page,
+            JavaScript controls how the page behaves and
+            makes it interactive. I found the example
+            with the light bulb particularly interesting
+            because it showed how JavaScript can change
+            an image simply by clicking a button to turn
+            the light on or off. Another interesting feature
+            is that JavaScript can work with dates and
+            times using Date objects and display them
+            in different formats. Finally, I discovered
+            that the HTML canvas element allows us to
+            draw graphics, such as lines, circles,
+            squares, and text, using JavaScript.
+            Personally, I think these features are very
+            useful because they allow us to create
+            websites that are not only visually
+            attractive but also interactive and
+            functional. I could use this knowledge in
+            the future to make my own web projects more
+            interesting and engaging for visitors.
+        </p>
+    </section>
+
+    <footer>
+        WEB110 / ASSIGNMENT 12 / JAVASCRIPT
+    </footer>
+
+</main>
+
+<script>
+    // DISPLAY NAME IN AN EMPTY H1 ELEMENT
+
+    document.getElementById("myName").innerHTML =
+        "Lada Custariova";
+
+
+    // LIGHT BULB
+
+    function turnOn() {
+        document.getElementById("lightBulb").src =
+            "https://www.w3schools.com/js/pic_bulbon.gif";
+
+        document.getElementById("lightBulb").alt =
+            "A light bulb that is turned on";
+
+        document.getElementById("bulbStatus").innerText =
+            "The light is on.";
+    }
+
+    function turnOff() {
+        document.getElementById("lightBulb").src =
+            "https://www.w3schools.com/js/pic_bulboff.gif";
+
+        document.getElementById("lightBulb").alt =
+            "A light bulb that is turned off";
+
+        document.getElementById("bulbStatus").innerText =
+            "The light is off.";
+    }
+
+
+    // DATE AND TIME
+
+    function updateDate() {
+        const now = new Date();
+
+        document.getElementById("currentDate").innerText =
+            now.toLocaleString("en-US", {
+                dateStyle: "full",
+                timeStyle: "medium"
+            });
+
+        document.getElementById("isoDate").innerText =
+            now.getFullYear() + "-" +
+            String(now.getMonth() + 1).padStart(2, "0") + "-" +
+            String(now.getDate()).padStart(2, "0");
+
+        document.getElementById("shortDate").innerText =
+            now.toLocaleDateString("en-US");
+
+        document.getElementById("longDate").innerText =
+            now.toLocaleDateString("en-US", {
+                month: "long",
+                day: "numeric",
+                year: "numeric"
+            });
+    }
+
+    updateDate();
+
+
+    // CANVAS TEXT
+
+    
+let nameAnimation;
+
+function drawName(animate = true) {
+    const canvas = document.getElementById("nameCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const name = "Lada Custariova";
+    let index = 0;
+
+    // Stop any previous animation
+    clearInterval(nameAnimation);
+
+    function drawText(text) {
+        // Clear the canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Set text appearance
+        ctx.fillStyle = "#806f99";
+        ctx.font = "bold 44px Arial";
+        ctx.textAlign = "center";
+
+        // Draw the text
+        ctx.fillText(text, canvas.width / 2, 100);
+
+        // Draw the decorative line when complete
+        if (text === name) {
+            ctx.beginPath();
+            ctx.moveTo(200, 125);
+            ctx.lineTo(500, 125);
+            ctx.strokeStyle = "#b8a3c8";
+            ctx.lineWidth = 3;
+            ctx.stroke();
+        }
+    }
+
+    // Show the complete name immediately on page load
+    if (!animate) {
+        drawText(name);
+        return;
+    }
+
+    // Clear the canvas before typing
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Write the name letter by letter
+    nameAnimation = setInterval(function () {
+        index++;
+
+        drawText(name.substring(0, index));
+
+        if (index >= name.length) {
+            clearInterval(nameAnimation);
+        }
+    }, 120);
+}
+
+
+    // CANVAS SHAPES
+
+    function drawShapes() {
+        const canvas =
+            document.getElementById("shapesCanvas");
+
+        const ctx = canvas.getContext("2d");
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Purple circle
+
+        ctx.beginPath();
+        ctx.arc(110, 130, 55, 0, 2 * Math.PI);
+        ctx.fillStyle = "#b8a3c8";
+        ctx.fill();
+
+        // Pink square
+
+        ctx.fillStyle = "#dca8ad";
+        ctx.fillRect(245, 75, 110, 110);
+
+        // Lavender triangle
+
+        ctx.beginPath();
+        ctx.moveTo(465, 75);
+        ctx.lineTo(405, 185);
+        ctx.lineTo(525, 185);
+        ctx.closePath();
+        ctx.fillStyle = "#907aa8";
+        ctx.fill();
+
+        // Decorative line
+
+        ctx.beginPath();
+        ctx.moveTo(565, 80);
+        ctx.lineTo(650, 180);
+        ctx.strokeStyle = "#806f99";
+        ctx.lineWidth = 6;
+        ctx.stroke();
+    }
+
+    // Draw graphics when the page loads
+
+
+        drawShapes();
+        drawName(false);
+
+</script>
+
+</body>
+</html>
